@@ -11,3 +11,5 @@ Como usar:
 
 Para usar este organizador, basta copiar e colar o código "app.py" em seu editor de código, e rodar em sua máquina.
 Este programa não necessita de nenhuma instalação de dependências.
+
+OBS. O programa está passando por algumas correções de falhas.
