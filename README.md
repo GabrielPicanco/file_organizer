@@ -1,15 +1,13 @@
 # file_organizer
 
-Organizador de Arquivos feito em Python.
+File Organizer made in Python.
 
-Funcionamento:
+Operation:
 
-Ao rodar o código "app.py" em seu computador, o programa irá abrir um pop-up mostrando as pastas do computador.
-Basta selecionar uma pasta, que automaticamente o programa organizará os arquivos em pastas separadas pelo seu formato.
+When running the code "app.py" on your computer, the program will open a pop-up showing the computer's folders. Just select a folder, and the program will automatically organize the files into folders separated by their format.
 
-Como usar:
+How to use:
 
-Para usar este organizador, basta copiar e colar o código "app.py" em seu editor de código, e rodar em sua máquina.
-Este programa não necessita de nenhuma instalação de dependências.
+To use this organizer, simply copy and paste the code "app.py" into your code editor, and run it on your machine. This program does not require any dependency installation.
 
-OBS. O programa está passando por algumas correções de falhas.
+NOTE. The program is undergoing some bug fixes.
