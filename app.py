@@ -3,28 +3,38 @@ from tkinter.filedialog import askdirectory
 
 caminho = askdirectory()
 
-arquivos = os.listdir(caminho)
+os.chdir(caminho)
+
+arquivos_pasta = (os.listdir(caminho))
+
+arquivos_files = []
 
 
 locais = {'Documentos De Texto': '.txt',
-          'Arquivo Power Point': '.pptx',
+          'Arquivos Power Point': '.pptx',
           'Planilhas Excel': '.xlsx',
-          'Aplicativos': '.url',
-          'PDFs': '.pdf',
-          'Imagens': ['.png','.jpg']}
+          'Imagens': ['.png', '.jpg'],
+          'GIFs': '.gif',
+          'Documentos Word': '.docx',
+          'Aplicativos e jogos': '.url'}
 
-contador = len(arquivos)
+while True:
+    for arquivo in arquivos_pasta:
+        if os.path.isfile(arquivo):
+            arquivos_files.append(arquivo)
 
-while len(arquivos) > 0:
-    for arquivo in arquivos:
-        nome, formato = os.path.splitext(arquivo)
+    for file in arquivos_files:
+        nome, formato = os.path.splitext(file)
         for pasta in locais:
             if formato in locais[pasta]:
                 try:
                     os.mkdir(f'{caminho}/{pasta}')
                 except FileExistsError:
-                    os.rename(f'{caminho}/{arquivo}', f'{caminho}/{pasta}/{arquivo}')
-                    arquivos.remove(arquivo)
+                    print('')
+                    os.rename(f'{caminho}/{file}', f'{caminho}/{pasta}/{file}')
+                    arquivos_files.remove(file)
+                except FileNotFoundError:
+                    print('')
                 else:
-                    os.rename(f'{caminho}/{arquivo}', f'{caminho}/{pasta}/{arquivo}')
-                    arquivos.remove(arquivo)
+                    os.rename(f'{caminho}/{file}', f'{caminho}/{pasta}/{file}')
+                    arquivos_files.remove(file)
